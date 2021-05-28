@@ -1,0 +1,322 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: linear-gradient(to bottom, #af67e9 0%, #6565e7 100%);
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+/* TEXT */
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 1.7rem;
+    font-weight: normal;
+    color:hsl(237, 12%, 33%);
+}
+
+p {
+    font-size: 1.4rem;
+    color: hsl(240, 6%, 50%);
+}
+
+#main {
+    min-height: 90vh;
+}
+
+/* CARD */
+
+.card-container {
+    padding-top: 10rem;
+}
+
+.card{
+    display: flex;
+    width: 60%;
+    margin:auto;
+    background-color: #fff;
+    border-radius: 2rem;
+    max-height: 80rem;
+    overflow: hidden;
+}
+
+/* IMG-SIDE */
+
+.image-side {
+    flex: 1 1 40rem;
+    position: relative;
+}
+
+.image {
+    position: absolute;
+}
+
+.platform {
+    left: -80px;
+    top: 70px;
+}
+#box {
+    left: 15%;
+    top: 30rem;
+    z-index: 3;
+    transition: .5s ease-in-out;
+}
+.box-active {
+    transform:translateX(-40px);
+    transition: .5s ease-in-out;
+}
+
+/* FAQ side */
+
+#FAQ {
+    flex: 1 1 40rem;
+    padding: 6rem 0;
+}
+
+.header {
+    padding-bottom: 4rem;
+}
+
+.accordion {
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+
+.question {
+    border: none;
+    background-color: #fff;
+    align-items: center;
+}
+.question:hover{
+    color:hsl(14, 88%, 65%);
+    cursor: pointer;
+}
+.question::after{
+    content: url('images/icon-arrow-down.svg');
+    position: absolute;
+    left:80%;
+}
+.question-active::after {
+    transform:rotateX(180deg);
+}
+
+.answer {
+    padding-right: 17rem;
+    padding-top: 1rem;
+    line-height: 1.5;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: .5s ease-in-out;
+}
+
+.bolded {
+    font-weight: bold;
+}
+
+
+
+
+/* Footer */
+
+.attribution {
+    min-height: 10vh;
+    text-align: center;
+    color: orange;
+    font-size: 1.5rem;
+    padding-top: 4rem;
+}
+
+.attribution a {
+    color: #fff;
+}
+
+
+/* Media 1440px */
+
+@media screen and (max-width: 1340px) {
+    .question::after {
+        left:90%;
+    }
+    .image {
+        max-width: 115%;
+    }
+    #box {
+        height: 18%;
+        left: 13%;
+        top: 28rem;
+    }
+}
+
+/* MEDIA 1150px */
+
+@media screen and (max-width: 1150px) {
+    h1 {
+        text-align: center;
+        font-size: 4.5rem;
+    }
+    #FAQ {
+        padding: 10rem 0;
+    }
+    
+    .card {
+        display: block;
+        margin-top: 15rem;
+        margin-bottom: 5rem;
+        padding: 10rem 5rem 0;
+        overflow: visible;
+    }
+    .platform {
+        left: 40px;
+        top: -315px;
+    }
+    #box {
+        left: 27%;
+        top: 17rem;
+    }
+    .box-active {
+        transform:translateY(-40px);
+    }
+}
+
+/* Media 1000px */
+
+@media screen and (max-width: 1000px) {
+    
+    .platform {
+        left: 10px;
+    }
+}
+
+/* Media 950px */
+
+@media screen and (max-width: 950px) {
+    
+    .image {
+        max-width: 85%;
+    }
+    .platform {
+        left: 35px;
+        top: -280px;
+    }
+    #box {
+        height: 15%;
+        left: 30%;
+        top: 17rem;
+    }
+}
+
+/* Media 800px */
+
+@media screen and (max-width: 800px) {
+
+    .card {
+        padding: 10rem 3rem 0;
+    }
+    .image {
+        max-width: 85%;
+    }
+    .platform {
+        top: -240px;
+    }
+    #box {
+        height: 11%;
+        left: 31%;
+        top: 20rem;
+    }
+    
+    .question::after {
+        left: 100%;
+    }
+    .answer {
+        padding-right: 6rem;
+    }
+}
+
+/* Media 650px */
+
+@media screen and (max-width: 650px) {
+    
+
+    .card {
+        width: 80%;
+    }
+
+    #box {
+        left: 22%;
+    }
+    .platform {
+        top: -270px;
+    }
+}
+
+/* Media 550px */
+
+@media screen and (max-width: 550px){
+    .platform {
+    top: -245px;
+    }
+}
+
+
+/* Media 500px  */
+@media screen and (max-width: 500px) {
+    html {
+            font-size: 47%;
+        }
+
+    .platform {
+        top: -210px;
+    }
+}
+
+/* Media 475px  */
+@media screen and (max-width: 475px) {
+    .platform {
+        top: -200px;
+    }
+}
+
+/* Media 450px  */
+@media screen and (max-width: 450px) {
+    .platform {
+        top: -188px;
+    }
+}
+
+/* Media 425px  */
+@media screen and (max-width: 425px) {
+    #box {
+        height: 10%;
+        left: 24%;
+        top: 19rem;
+    }
+}
+
+/* Media 375px  */
+@media screen and (max-width: 375px) {
+    #box {
+        left: 20%;
+        top: 20rem;
+    }
+    .platform {
+    top: -170px;
+    left: 20px;
+    }
+
+    .answer {
+        padding-right: 1rem;
+    }
+}
